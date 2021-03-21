@@ -7,7 +7,7 @@ data "aws_ssm_parameter" "linuxAmi" {
 resource "aws_key_pair" "master-key" {
 
   key_name   = "Demo"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("public.TXT")
 
 }
 

@@ -32,5 +32,3 @@ override.tf.json
 .terraformrc
 terraform.rc
 © 2021 GitHub, Inc.
-
-provider.tf

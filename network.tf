@@ -28,7 +28,7 @@ resource "aws_internet_gateway" "igw" {
 #Create NGW
 resource "aws_nat_gateway" "nat_gateway" {
   allocation_id = aws_eip.nat.id
-  subnet_id     = aws_subnet.subnet_private.id
+  subnet_id     = aws_subnet.subnet_public.id
   tags = {
     "Name" = "NGW"
   }

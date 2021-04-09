@@ -1,4 +1,4 @@
-bucket               = ""yuan-terraform-backend""
+bucket               = "yuan-terraform-backend"
 key                  = "terraform.tfstate"
 workspace_key_prefix = "terraform-workspaces"
 dynamodb_table       = "s3-state-lock"

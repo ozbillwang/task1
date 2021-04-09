@@ -62,13 +62,13 @@ jobs:
         run: 'echo "$WORKSPACE"'
 
       - name: Terraform Init
-        uses: hashicorp/terraform-github-actions@master
+        uses: rewindio/terraform-github-actions@main
         with:
           tf_actions_version: ${{ env.TF_VERSION }}
           tf_actions_subcommand: init
           args: -backend-config backend/backend.tfvars
         env:
-          TF_WORKSPACE: ${{ env.WORKSPACE }}
+          TF_WORKSPACE: ${{ env.WORKSPACE }
           AWS_SHARED_CREDENTIALS_FILE: .aws/credentials
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

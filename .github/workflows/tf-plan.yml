@@ -2,7 +2,7 @@ name: terraform-plan
 
 on: push
   branches:
-     - dev/githubaction
+     - master
 
 env:
   TF_VERSION: 0.12.20

@@ -10,7 +10,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workspace: [st-test-results-bucket_ap-southeast-2]
+        workspace: [st-test-results-bucket_ap-southeast-2,
+        pd-test-results-bucket_ap-southeast-2]
 
     name: ${{ matrix.workspace }}
     runs-on: ubuntu-latest
@@ -74,7 +75,7 @@ jobs:
           tf_actions_version: ${{ env.TF_VERSION }}
           tf_actions_subcommand: validate
         env:
-          #TF_WORKSPACE: ${{ env.WORKSPACE }}
+          TF_WORKSPACE: ${{ env.WORKSPACE }}
           AWS_SHARED_CREDENTIALS_FILE: .aws/credentials
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -86,7 +87,7 @@ jobs:
           tf_actions_subcommand: plan
           args: -var-file backend/backend.tfvars -var-file ${{ steps.tfvars.outputs.tfvars_file }}
         env:
-          #TF_WORKSPACE: ${{ env.WORKSPACE }}
+          TF_WORKSPACE: ${{ env.WORKSPACE }}
           AWS_SHARED_CREDENTIALS_FILE: .aws/credentials
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -1,8 +1,6 @@
 name: terraform-plan
 
 on: push
-  branches:
-     - master
 
 env:
   TF_VERSION: 0.12.20

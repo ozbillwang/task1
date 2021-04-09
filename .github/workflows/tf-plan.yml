@@ -58,6 +58,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: TF_WORKSPACE
+        commad: 'echo "$WORKSPACE"'
+
       - name: Terraform Init
         uses: hashicorp/terraform-github-actions@master
         with:

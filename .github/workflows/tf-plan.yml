@@ -1,6 +1,6 @@
 name: terraform-plan
 
-on: pull
+on: push
 
 env:
   TF_VERSION: 0.12.20

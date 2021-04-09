@@ -68,7 +68,7 @@ jobs:
           tf_actions_subcommand: init
           args: -backend-config backend/backend.tfvars
         env:
-          TF_WORKSPACE: ${{ env.WORKSPACE }
+          TF_WORKSPACE: ${{ env.WORKSPACE }}
           AWS_SHARED_CREDENTIALS_FILE: .aws/credentials
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

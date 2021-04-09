@@ -1,13 +1,2 @@
-
-variable "instance-type" {
-  type    = string
-  default = "t3.micro"
-}
-
-
-
-variable "external_ip" {
-  type    = string
-  default = "0.0.0.0/0"
-
-}
+instance-type="t3.micro"
+external_ip = "0.0.0.0/0"
